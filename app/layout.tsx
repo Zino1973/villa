@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Schema from "./schema";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.housevillatalija.de"),
@@ -98,7 +99,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body>{children}</body>
+      <body>
+        <Schema />
+        {children}
+      </body>
     </html>
   );
 }
