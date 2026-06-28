@@ -1,50 +1,64 @@
-const reviews = [
-  {
-    name: "Familie M.",
-    text: "Eine wunderschöne Villa mit tollem Pool. Sehr sauber und perfekt zum Entspannen. Wir kommen wieder!",
-  },
-  {
-    name: "Sandra & Thomas",
-    text: "Ruhige Lage, hochwertige Ausstattung und ein traumhafter Außenbereich. Absolut empfehlenswert.",
-  },
-  {
-    name: "Markus",
-    text: "Die Villa ist genauso schön wie auf den Bildern. Der Grill- und Poolbereich war unser Highlight.",
-  },
-];
-
 export default function Reviews() {
+  const reviews = [
+    {
+      name: "★★★★★",
+      title: "Wunderschöne Villa",
+      text:
+        "Ein traumhaftes Ferienhaus mit großem Pool, moderner Ausstattung und viel Privatsphäre. Wir kommen gerne wieder!",
+    },
+    {
+      name: "★★★★★",
+      title: "Perfekter Familienurlaub",
+      text:
+        "Sehr gepflegt, tolle Außenküche und alles vorhanden, was man für einen entspannten Urlaub braucht.",
+    },
+    {
+      name: "★★★★★",
+      title: "Top Gastgeber",
+      text:
+        "Schnelle Kommunikation, unkomplizierte Anreise und eine wunderschöne Villa in ruhiger Lage.",
+    },
+  ];
+
   return (
-    <section className="bg-white py-24">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-24 bg-slate-50">
+      <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-4xl font-bold text-center mb-4">
-          Das sagen unsere Gäste
-        </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold">
+            Das sagen unsere Gäste
+          </h2>
 
-        <p className="text-center text-gray-600 mb-14">
-          Bewertungen unserer bisherigen Urlaubsgäste
-        </p>
+          <p className="mt-4 text-xl text-slate-500">
+            Erholung, Komfort und unvergessliche Urlaubstage.
+          </p>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {reviews.map((review) => (
+
+          {reviews.map((review, index) => (
             <div
-              key={review.name}
-              className="rounded-2xl bg-gray-50 shadow-lg p-8"
+              key={index}
+              className="bg-white rounded-3xl shadow-xl p-8"
             >
               <div className="text-yellow-500 text-2xl mb-4">
-                ★★★★★
+                ⭐⭐⭐⭐⭐
               </div>
 
-              <p className="text-gray-700 leading-7">
-                "{review.text}"
+              <h3 className="text-2xl font-bold mb-3">
+                {review.title}
+              </h3>
+
+              <p className="text-slate-600 leading-8">
+                {review.text}
               </p>
 
-              <p className="mt-6 font-bold">
+              <div className="mt-6 font-semibold text-slate-800">
                 {review.name}
-              </p>
+              </div>
             </div>
           ))}
+
         </div>
 
       </div>

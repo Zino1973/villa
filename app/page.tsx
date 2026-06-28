@@ -4,10 +4,10 @@ import Gallery from "./components/Gallery";
 import Features from "./components/Features";
 import Highlights from "./components/Highlights";
 import Prices from "./components/Prices";
-import BookingCalendar from "./components/BookingCalendar";
 import AvailabilityCalendar from "./components/AvailabilityCalendar";
 import Explore from "./components/Explore";
 import Reviews from "./components/Reviews";
+import WhyBookUs from "./components/WhyBookUs";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -29,6 +29,8 @@ export default function Home() {
       <AvailabilityCalendar />
 
       <Explore />
+
+      <WhyBookUs />
 
       <Reviews />
 
