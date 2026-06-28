@@ -4,6 +4,12 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.housevillatalija.de"),
 
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
+
   title: {
     default: "House Villa Talija | Ferienhaus mit Pool in Istrien",
     template: "%s | House Villa Talija",
@@ -65,7 +71,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/images/hero.jpeg",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "House Villa Talija",
@@ -81,7 +87,7 @@ export const metadata: Metadata = {
     description:
       "Ferienvilla mit privatem Pool in Istrien.",
 
-    images: ["/images/hero.jpeg"],
+    images: ["/opengraph-image.png"],
   },
 };
 
