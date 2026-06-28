@@ -19,124 +19,19 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}.fc .fc-toolbar-title{
-    font-size:2rem;
-    font-weight:700;
 }
 
-.fc .fc-button{
-    background:#0ea5e9!important;
-    border:none!important;
-}
-
-.fc .fc-button:hover{
-    background:#0284c7!important;
-}
-
-.fc-day-today{
-    background:#dbeafe!important;
-}
-
-.fc{
-    font-family:inherit;
-}
-
-.fc-event{
-    border-radius:8px;
-}
-
-.fc-scrollgrid{
-    border-radius:20px;
-    overflow:hidden;
-}
-
-.fc-daygrid-day{
-    min-height:110px;
-}.fc .fc-toolbar-title{
-    font-size:2rem;
-    font-weight:700;
-}
-
-.fc .fc-button{
-    background:#0284c7!important;
-    border:none!important;
-}
-
-.fc .fc-button:hover{
-    background:#0369a1!important;
-}
-
-.fc-day-today{
-    background:#dbeafe!important;
-}
-
-.fc-event{
-    border-radius:8px;
-}
-
-.fc-scrollgrid{
-    border-radius:20px;
-    overflow:hidden;
-}
-
-.fc-multimonth{
-    gap:40px;
-}
-
-.fc-multimonth-title{
-    font-size:1.7rem;
-    font-weight:700;
-    padding:15px 0;
-}
-
-.fc-daygrid-day{
-    min-height:90px;
-}.fc .fc-toolbar-title{
-    font-size:2rem;
-    font-weight:700;
-}
-
-.fc .fc-button{
-    background:#0284c7!important;
-    border:none!important;
-}
-
-.fc .fc-button:hover{
-    background:#0369a1!important;
-}
-
-.fc-day-today{
-    background:#dbeafe!important;
-}
-
-.fc-event{
-    border-radius:8px;
-}
-
-.fc-scrollgrid{
-    border-radius:20px;
-    overflow:hidden;
-}
-
-.fc-multimonth{
-    gap:40px;
-}
-
-.fc-multimonth-title{
-    font-size:1.7rem;
-    font-weight:700;
-    padding:15px 0;
-}
-
-.fc-daygrid-day{
-    min-height:90px;
-}/* ============================= */
-/* FullCalendar - Villa Talija   */
-/* ============================= */
+/* ==========================================
+   FullCalendar
+========================================== */
 
 .fc {
   font-family: inherit;
@@ -159,6 +54,7 @@ body {
   border-radius: 10px !important;
   padding: 8px 14px !important;
   font-weight: 600;
+  transition: all .2s ease;
 }
 
 .fc .fc-button:hover {
@@ -171,11 +67,7 @@ body {
 
 .fc-day-today {
   background: #dbeafe !important;
-}
-
-.fc-scrollgrid {
-  border-radius: 20px;
-  overflow: hidden;
+  border: 2px solid #0284c7 !important;
 }
 
 .fc-theme-standard td,
@@ -184,23 +76,27 @@ body {
   border-color: #e5e7eb;
 }
 
+.fc-scrollgrid {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 .fc-event {
   border-radius: 8px;
+}
+
+.fc-bg-event {
+  background: #dc2626 !important;
+  opacity: .95 !important;
 }
 
 .fc-daygrid-day {
   min-height: 90px;
 }
 
-.fc-multimonth {
-  gap: 40px;
-}
-
-.fc-multimonth-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #0f172a;
-  padding: 12px 0;
+.fc-daygrid-day:hover {
+  filter: brightness(.97);
+  transition: .2s;
 }
 
 .fc-col-header-cell {
@@ -211,32 +107,70 @@ body {
 .fc-daygrid-day-number {
   color: #334155;
   font-weight: 600;
-}/* Heute */
-.fc-day-today {
-  background: #dbeafe !important;
-  border: 2px solid #0284c7 !important;
 }
 
-/* Belegte Tage */
-.fc-bg-event {
-  background: #dc2626 !important;
-  opacity: 0.95 !important;
+.fc-multimonth {
+  gap: 40px;
 }
 
-/* Hover */
-.fc-daygrid-day:hover {
-  filter: brightness(0.97);
-  transition: 0.2s;
-}
-
-/* Monatsüberschrift */
 .fc-multimonth-title {
   font-size: 1.6rem;
   font-weight: 700;
   color: #0f172a;
+  padding: 12px 0;
 }
 
-/* Buttons */
-.fc .fc-button {
-  border-radius: 10px !important;
+/* ==========================================
+   Scrollbar
+========================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
 }
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0284c7;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0369a1;
+}
+
+/* ==========================================
+   Auswahlfarbe
+========================================== */
+
+::selection {
+  background: #0284c7;
+  color: white;
+}
+
+/* ==========================================
+   Bilder
+========================================== */
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ==========================================
+   Links
+========================================== */
+
+a {
+  transition: all .25s ease;
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+
+button {
+  transition: all .25s ease;
+}‚
