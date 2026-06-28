@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ExploreMap from "./ExploreMap";
 
 const places = [
   {
@@ -8,7 +9,7 @@ const places = [
   },
   {
     title: "Kap Kamenjak",
-    text: "Kristallklares Wasser, Felsküsten und traumhafte Buchten zum Baden.",
+    text: "Kristallklares Wasser, Felsküsten und traumhafte Buchten.",
     image: "/images/kamenjak.jpg",
   },
   {
@@ -20,19 +21,22 @@ const places = [
 
 export default function Explore() {
   return (
-    <section className="bg-slate-50 py-28">
+    <section id="explore" className="bg-slate-50 py-28">
       <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-5xl font-bold text-center mb-5">
-          Entdecke Istrien
-        </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold">
+            Entdecke Istrien
+          </h2>
 
-        <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
-          Rund um die Villa Talija warten traumhafte Strände, historische Städte
-          und unvergessliche Ausflugsziele.
-        </p>
+          <p className="mt-5 text-xl text-slate-600 max-w-3xl mx-auto">
+            Rund um die House Villa Talija warten traumhafte Strände,
+            historische Städte und unvergessliche Ausflugsziele.
+          </p>
+        </div>
 
         <div className="grid lg:grid-cols-3 gap-10">
+
           {places.map((place) => (
             <div
               key={place.title}
@@ -48,16 +52,25 @@ export default function Explore() {
               />
 
               <div className="p-8">
+
                 <h3 className="text-2xl font-bold mb-4">
                   {place.title}
                 </h3>
 
-                <p className="text-gray-600 leading-7">
+                <p className="text-slate-600 leading-7">
                   {place.text}
                 </p>
+
               </div>
             </div>
           ))}
+
+        </div>
+
+        {/* Google Maps + Ausflugsziele */}
+
+        <div className="mt-24">
+          <ExploreMap />
         </div>
 
       </div>
