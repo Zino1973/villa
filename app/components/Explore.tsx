@@ -14,7 +14,7 @@ const places = [
   },
   {
     title: "Duga Uvala",
-    text: "Einer der schönsten Strände in der Nähe der Villa Talija.",
+    text: "Einer der schönsten Strände in der Nähe der House Villa Talija.",
     image: "/images/duga-uvala.jpg",
   },
 ];
@@ -40,7 +40,7 @@ export default function Explore() {
           {places.map((place) => (
             <div
               key={place.title}
-              className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+              className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300"
             >
               <Image
                 src={place.image}
@@ -67,11 +67,9 @@ export default function Explore() {
 
         </div>
 
-        {/* Google Maps + Ausflugsziele */}
+        {/* Interaktive Karte */}
 
-        <div className="mt-24">
-          <ExploreMap />
-        </div>
+        <ExploreMap />
 
       </div>
     </section>

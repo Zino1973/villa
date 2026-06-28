@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+
+/* ==========================================
+   Farben
+========================================== */
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -19,6 +24,10 @@
   }
 }
 
+/* ==========================================
+   Allgemein
+========================================== */
+
 html {
   scroll-behavior: smooth;
 }
@@ -27,6 +36,54 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==========================================
+   Links & Buttons
+========================================== */
+
+a,
+button {
+  transition: all 0.25s ease;
+}
+
+/* ==========================================
+   Bilder
+========================================== */
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ==========================================
+   Scrollbar
+========================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0284c7;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0369a1;
+}
+
+/* ==========================================
+   Text markieren
+========================================== */
+
+::selection {
+  background: #0284c7;
+  color: white;
 }
 
 /* ==========================================
@@ -54,7 +111,6 @@ body {
   border-radius: 10px !important;
   padding: 8px 14px !important;
   font-weight: 600;
-  transition: all .2s ease;
 }
 
 .fc .fc-button:hover {
@@ -70,15 +126,15 @@ body {
   border: 2px solid #0284c7 !important;
 }
 
+.fc-scrollgrid {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 .fc-theme-standard td,
 .fc-theme-standard th,
 .fc-theme-standard .fc-scrollgrid {
   border-color: #e5e7eb;
-}
-
-.fc-scrollgrid {
-  border-radius: 20px;
-  overflow: hidden;
 }
 
 .fc-event {
@@ -96,7 +152,6 @@ body {
 
 .fc-daygrid-day:hover {
   filter: brightness(.97);
-  transition: .2s;
 }
 
 .fc-col-header-cell {
@@ -121,56 +176,20 @@ body {
 }
 
 /* ==========================================
-   Scrollbar
+   Leaflet
 ========================================== */
 
-::-webkit-scrollbar {
-  width: 10px;
+.leaflet-container {
+  width: 100%;
+  height: 600px;
+  border-radius: 24px;
+  z-index: 1;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
+.leaflet-popup-content {
+  font-size: 15px;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #0284c7;
-  border-radius: 999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #0369a1;
-}
-
-/* ==========================================
-   Auswahlfarbe
-========================================== */
-
-::selection {
-  background: #0284c7;
-  color: white;
-}
-
-/* ==========================================
-   Bilder
-========================================== */
-
-img {
-  user-select: none;
-  -webkit-user-drag: none;
-}
-
-/* ==========================================
-   Links
-========================================== */
-
-a {
-  transition: all .25s ease;
-}
-
-/* ==========================================
-   Buttons
-========================================== */
-
-button {
-  transition: all .25s ease;
+.leaflet-control-zoom a {
+  color: #111827;
 }

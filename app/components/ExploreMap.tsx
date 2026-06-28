@@ -62,12 +62,12 @@ export default function ExploreMap() {
     <section className="mt-24">
 
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold">
+        <h2 className="text-5xl font-bold">
           Karte & Ausflugsziele
         </h2>
 
-        <p className="mt-4 text-lg text-slate-600">
-          Die schönsten Orte rund um die House Villa Talija.
+        <p className="mt-4 text-xl text-slate-600">
+          Rund um die House Villa Talija.
         </p>
       </div>
 
@@ -75,12 +75,13 @@ export default function ExploreMap() {
 
         <iframe
           title="House Villa Talija"
-          src="https://www.google.com/maps?q=House+Villa+Talija+Hreljici&output=embed"
+          src="https://www.google.com/maps?q=House+Villa+Talija+Hreljici&z=10&output=embed"
           width="100%"
-          height="550"
+          height="600"
           style={{ border: 0 }}
           loading="lazy"
           allowFullScreen
+          referrerPolicy="no-referrer-when-downgrade"
         />
 
       </div>
@@ -93,9 +94,9 @@ export default function ExploreMap() {
             href={place.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-3xl bg-white shadow-lg hover:shadow-2xl hover:-translate-y-1 transition p-8"
+            className="bg-white rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-1 transition p-8"
           >
-            <div className="text-5xl mb-4">
+            <div className="text-5xl mb-5">
               {place.icon}
             </div>
 
@@ -103,7 +104,7 @@ export default function ExploreMap() {
               {place.name}
             </h3>
 
-            <p className="text-sky-600 font-semibold mt-2">
+            <p className="mt-2 text-sky-600 font-semibold">
               {place.distance}
             </p>
 
@@ -112,8 +113,9 @@ export default function ExploreMap() {
             </p>
 
             <div className="mt-6 text-sky-700 font-bold">
-              Route starten →
+              📍 Route starten →
             </div>
+
           </a>
         ))}
 
