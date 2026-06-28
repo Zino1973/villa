@@ -10,6 +10,7 @@ import Reviews from "./components/Reviews";
 import WhyBookUs from "./components/WhyBookUs";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Stats from "./components/Stats";
 
 export default function Home() {
   return (
@@ -24,6 +25,8 @@ export default function Home() {
 
       <Highlights />
 
+      <Stats />
+
       <Prices />
 
       <AvailabilityCalendar />
@@ -35,6 +38,7 @@ export default function Home() {
       <Reviews />
 
       <Contact />
+      
 
       <Footer />
     </main>
