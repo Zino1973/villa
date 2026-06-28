@@ -9,36 +9,39 @@ export async function GET() {
       }
     );
 
+    if (!response.ok) {
+      throw new Error("ICS konnte nicht geladen werden");
+    }
+
     const text = await response.text();
 
-    const events = [];
+    const events: {
+      title: string;
+      start: string;
+      end: string;
+    }[] = [];
 
     const regex =
-      /BEGIN:VEVENT[\s\S]*?DTSTART.*?:(\d{8})[\s\S]*?DTEND.*?:(\d{8})[\s\S]*?END:VEVENT/g;
+      /BEGIN:VEVENT[\s\S]*?DTSTART(?:;VALUE=DATE)?:(\d{8})[\s\S]*?DTEND(?:;VALUE=DATE)?:(\d{8})[\s\S]*?END:VEVENT/g;
 
-    let match;
+    let match: RegExpExecArray | null;
 
     while ((match = regex.exec(text)) !== null) {
       events.push({
         title: "Belegt",
-        start:
-          match[1].substring(0, 4) +
-          "-" +
-          match[1].substring(4, 6) +
-          "-" +
-          match[1].substring(6, 8),
-
-        end:
-          match[2].substring(0, 4) +
-          "-" +
-          match[2].substring(4, 6) +
-          "-" +
-          match[2].substring(6, 8),
+        start: `${match[1].slice(0, 4)}-${match[1].slice(4, 6)}-${match[1].slice(6, 8)}`,
+        end: `${match[2].slice(0, 4)}-${match[2].slice(4, 6)}-${match[2].slice(6, 8)}`,
       });
     }
 
-    return NextResponse.json(events);
-  } catch {
+    return NextResponse.json(events, {
+      headers: {
+        "Cache-Control": "no-store",
+      },
+    });
+  } catch (error) {
+    console.error(error);
+
     return NextResponse.json(
       {
         error: "Kalender konnte nicht geladen werden",

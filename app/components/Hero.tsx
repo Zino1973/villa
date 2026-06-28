@@ -22,7 +22,6 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen overflow-hidden">
-
       {images.map((image, index) => (
         <div
           key={index}
@@ -40,35 +39,29 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/45" />
 
       <div className="relative z-10 flex min-h-screen items-center justify-center px-6 py-32">
-
         <div className="max-w-5xl text-center text-white">
-
           <p className="uppercase tracking-[8px] text-white/80 mb-4">
             Kroatien • Istrien
           </p>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight drop-shadow-2xl">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black drop-shadow-2xl">
             Villa Talija
           </h1>
 
           <p className="mt-8 text-xl md:text-3xl leading-relaxed max-w-3xl mx-auto">
-            Luxusurlaub mit privatem Pool,
-            Außenküche und mediterranem Flair.
+            Luxusurlaub mit privatem Pool, Außenküche und mediterranem Flair.
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-6 text-lg">
-
             <span>🏊 Privater Pool</span>
             <span>👨‍👩‍👧‍👦 Bis 6 Gäste</span>
             <span>📶 WLAN</span>
             <span>🔥 Napoleon Grill</span>
             <span>🏓 Tischtennis</span>
             <span>🎯 Dart</span>
-
           </div>
 
           <div className="mt-14">
-
             <a
               href="https://wa.me/4917635863392?text=Hallo%20Christian,%20ich%20interessiere%20mich%20für%20die%20Villa%20Talija."
               target="_blank"
@@ -81,15 +74,14 @@ export default function Hero() {
             <p className="mt-5 text-green-200 font-semibold">
               Keine Buchungsgebühren • Persönlicher Gastgeber • Schnelle Antwort
             </p>
-
           </div>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-
             <a
-              href="https://www.ferienhausmiete.de/469886.htm"
+              href="https://www.ferienhausmiete.de/4698869.htm?force_calc=1&adults=2&kid=0&pers=2"
               target="_blank"
-              className="rounded-full bg-yellow-400 hover:bg-yellow-300 px-8 py-4 font-semibold text-black shadow-xl"
+              rel="noopener noreferrer"
+              className="rounded-full bg-yellow-400 hover:bg-yellow-300 transition px-8 py-4 font-semibold text-black shadow-xl"
             >
               🏡 Ferienhausmiete
             </a>
@@ -97,24 +89,22 @@ export default function Hero() {
             <a
               href="https://www.airbnb.de/rooms/1255119120602857683"
               target="_blank"
-              className="rounded-full bg-pink-600 hover:bg-pink-700 px-8 py-4 font-semibold shadow-xl"
+              rel="noopener noreferrer"
+              className="rounded-full bg-pink-600 hover:bg-pink-700 transition px-8 py-4 font-semibold shadow-xl"
             >
               🏠 Airbnb
             </a>
 
             <a
               href="#belegung"
-              className="rounded-full bg-sky-600 hover:bg-sky-700 px-8 py-4 font-semibold shadow-xl"
+              className="rounded-full bg-sky-600 hover:bg-sky-700 transition px-8 py-4 font-semibold shadow-xl"
             >
               📅 Live-Belegung
             </a>
-
           </div>
 
           <div className="mt-16 grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-
             <div className="rounded-3xl bg-black/35 backdrop-blur-xl border border-white/20 shadow-2xl p-6">
-
               <div className="text-sm uppercase tracking-[3px] text-white/70">
                 ☀️ Heute in Hreljići
               </div>
@@ -130,7 +120,6 @@ export default function Hero() {
               <div className="text-white/70">
                 Perfektes Poolwetter 🌴
               </div>
-
             </div>
 
             <a
@@ -139,7 +128,6 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="rounded-3xl bg-black/35 backdrop-blur-xl border border-white/20 shadow-2xl p-6 hover:bg-black/45 transition"
             >
-
               <div className="text-sm uppercase tracking-[3px] text-white/70">
                 📍 Standort
               </div>
@@ -151,19 +139,14 @@ export default function Hero() {
               <div className="mt-2 text-white/70">
                 Route zur Villa starten
               </div>
-
             </a>
-
           </div>
 
           <div className="mt-12 animate-bounce text-3xl">
             ↓
           </div>
-
         </div>
-
       </div>
-
     </section>
   );
 }

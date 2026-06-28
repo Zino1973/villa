@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.housevillatalija.de"),
 
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
     apple: "/icon.png",
   },
 
@@ -20,17 +20,31 @@ export const metadata: Metadata = {
     "Exklusive Ferienvilla mit privatem Pool in Hreljići, Istrien (Kroatien). Bis zu 6 Gäste, WLAN, Außenküche, Napoleon Grill und Direktbuchung ohne Vermittlungsgebühren.",
 
   keywords: [
+    "House Villa Talija",
+    "Villa Talija",
     "Ferienhaus Kroatien",
     "Ferienhaus Istrien",
+    "Ferienhaus Hreljići",
+    "Ferienhaus Pula",
+    "Ferienhaus Rovinj",
+    "Villa Kroatien",
     "Villa Istrien",
-    "Villa mit Pool",
+    "Villa mit Pool Kroatien",
     "Ferienvilla Kroatien",
-    "Hreljići",
-    "Pula",
-    "Rovinj",
+    "Luxusvilla Kroatien",
+    "Poolvilla Kroatien",
+    "Ferienhaus mit privatem Pool",
+    "Ferienhaus privat",
+    "Direktbuchung Ferienhaus",
+    "Urlaub Istrien",
     "Urlaub Kroatien",
-    "Direktbuchung",
-    "House Villa Talija",
+    "Ferienunterkunft Istrien",
+    "Familienurlaub Kroatien",
+    "Villa für 6 Personen",
+    "Napoleon Grill",
+    "Außenküche",
+    "Privater Pool",
+    "WLAN",
   ],
 
   authors: [
@@ -64,12 +78,9 @@ export const metadata: Metadata = {
     locale: "de_DE",
     url: "https://www.housevillatalija.de",
     siteName: "House Villa Talija",
-
     title: "House Villa Talija | Ferienhaus mit Pool in Istrien",
-
     description:
       "Moderne Ferienvilla mit privatem Pool in Hreljići, Istrien. Ideal für bis zu 6 Gäste.",
-
     images: [
       {
         url: "/opengraph-image.png",
@@ -82,12 +93,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-
     title: "House Villa Talija",
-
-    description:
-      "Ferienvilla mit privatem Pool in Istrien.",
-
+    description: "Ferienvilla mit privatem Pool in Istrien.",
     images: ["/opengraph-image.png"],
   },
 };
