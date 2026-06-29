@@ -19,11 +19,18 @@ export default function GoogleAnalytics() {
       >
         {`
           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
+
+          function gtag(){
+            dataLayer.push(arguments);
+          }
+
           window.gtag = gtag;
+
           gtag('js', new Date());
+
           gtag('config', 'G-JEJ2VL3WLM', {
-            anonymize_ip: true
+            anonymize_ip: true,
+            send_page_view: true
           });
         `}
       </Script>
