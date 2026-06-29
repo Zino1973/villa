@@ -5,6 +5,7 @@ import Features from "./components/Features";
 import Highlights from "./components/Highlights";
 import Prices from "./components/Prices";
 import AvailabilityCalendar from "./components/AvailabilityCalendar";
+import Weather from "./components/Weather";
 import Explore from "./components/Explore";
 import Reviews from "./components/Reviews";
 import WhyBookUs from "./components/WhyBookUs";
@@ -31,6 +32,8 @@ export default function Home() {
 
       <AvailabilityCalendar />
 
+      <Weather />
+
       <Explore />
 
       <WhyBookUs />
@@ -38,7 +41,6 @@ export default function Home() {
       <Reviews />
 
       <Contact />
-      
 
       <Footer />
     </main>
