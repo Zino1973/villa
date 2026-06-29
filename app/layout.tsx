@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
+
 import Schema from "./schema";
+import Cookiebot from "./components/Cookiebot";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.housevillatalija.de"),
+
+  verification: {
+    google: "6V_cupEDPfQ0LysAcWvhjx7wmIs6UFlzmnA_YQUY88o",
+  },
 
   icons: {
     icon: "/favicon.ico",
@@ -105,19 +111,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" suppressHydrationWarning>
-      <head>
-        <script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="c2c248d5-6251-4921-82db-2c7e924df109"
-          data-blockingmode="auto"
-          type="text/javascript"
-          async
-        />
-      </head>
-
-      <body suppressHydrationWarning>
+    <html lang="de">
+      <body>
+        <Cookiebot />
         <Schema />
         {children}
       </body>
