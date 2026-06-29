@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 const stats = [
-  { value: 6, label: "Gäste", icon: "🏡" },
+  { value: 48, label: "Gäste", icon: "🏡" },
   { value: 32, label: "m² Pool", icon: "🏊" },
   { value: 300, suffix: "+", label: "Sonnentage", icon: "☀️" },
   { value: 5.0, decimals: 1, label: "Bewertung", icon: "⭐" },
