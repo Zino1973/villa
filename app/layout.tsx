@@ -3,6 +3,7 @@ import "./globals.css";
 
 import Schema from "./schema";
 import Cookiebot from "./components/Cookiebot";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.housevillatalija.de"),
@@ -114,9 +115,10 @@ export default function RootLayout({
     <html lang="de">
       <body>
         <Cookiebot />
+        <GoogleAnalytics />
         <Schema />
         {children}
       </body>
     </html>
   );
-}
+}‚
