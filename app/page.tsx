@@ -3,15 +3,16 @@ import Hero from "./components/Hero";
 import Gallery from "./components/Gallery";
 import Features from "./components/Features";
 import Highlights from "./components/Highlights";
+import Stats from "./components/Stats";
 import Prices from "./components/Prices";
 import AvailabilityCalendar from "./components/AvailabilityCalendar";
 import Weather from "./components/Weather";
+import GoogleReviews from "./components/GoogleReviews";
 import Explore from "./components/Explore";
-import Reviews from "./components/Reviews";
 import WhyBookUs from "./components/WhyBookUs";
+import Reviews from "./components/Reviews";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Stats from "./components/Stats";
 
 export default function Home() {
   return (
@@ -33,6 +34,8 @@ export default function Home() {
       <AvailabilityCalendar />
 
       <Weather />
+
+      <GoogleReviews />
 
       <Explore />
 
