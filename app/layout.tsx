@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./globals.css";
 import Schema from "./schema";
 
@@ -106,18 +105,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de">
+    <html lang="de" suppressHydrationWarning>
       <head>
-        <Script
+        <script
           id="Cookiebot"
           src="https://consent.cookiebot.com/uc.js"
           data-cbid="c2c248d5-6251-4921-82db-2c7e924df109"
           data-blockingmode="auto"
-          strategy="beforeInteractive"
+          type="text/javascript"
+          async
         />
       </head>
 
-      <body>
+      <body suppressHydrationWarning>
         <Schema />
         {children}
       </body>
