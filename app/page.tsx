@@ -10,7 +10,7 @@ import Weather from "./components/Weather";
 import GoogleReviews from "./components/GoogleReviews";
 import Explore from "./components/Explore";
 import WhyBookUs from "./components/WhyBookUs";
-import Instagram from "./components/Instagram";
+import InstagramFeed from "./components/InstagramFeed";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -41,7 +41,7 @@ export default function Home() {
 
       <WhyBookUs />
 
-      <Instagram />
+      <InstagramFeed />
 
       <Contact />
 
