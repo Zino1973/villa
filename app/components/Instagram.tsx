@@ -35,4 +35,4 @@ export default function Instagram() {
       </div>
     </section>
   );
-}‚
+}

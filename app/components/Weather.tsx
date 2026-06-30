@@ -22,17 +22,39 @@ const weatherIcons: Record<number, string> = {
   1: "🌤️",
   2: "⛅",
   3: "☁️",
+
   45: "🌫️",
   48: "🌫️",
+
   51: "🌦️",
   53: "🌦️",
   55: "🌧️",
+
+  56: "🌧️",
+  57: "🌧️",
+
   61: "🌦️",
   63: "🌧️",
   65: "🌧️",
+
+  66: "🌧️",
+  67: "🌧️",
+
   71: "❄️",
+  73: "❄️",
+  75: "❄️",
+  77: "❄️",
+
   80: "🌦️",
+  81: "🌧️",
+  82: "🌧️",
+
+  85: "🌨️",
+  86: "🌨️",
+
   95: "⛈️",
+  96: "⛈️",
+  99: "⛈️",
 };
 
 const weatherText: Record<number, string> = {
@@ -40,17 +62,39 @@ const weatherText: Record<number, string> = {
   1: "Überwiegend sonnig",
   2: "Teilweise bewölkt",
   3: "Bewölkt",
+
   45: "Nebel",
   48: "Reifnebel",
-  51: "Nieselregen",
+
+  51: "Leichter Nieselregen",
   53: "Nieselregen",
   55: "Starker Nieselregen",
+
+  56: "Gefrierender Nieselregen",
+  57: "Starker gefrierender Nieselregen",
+
   61: "Leichter Regen",
   63: "Regen",
   65: "Starker Regen",
-  71: "Schnee",
+
+  66: "Gefrierender Regen",
+  67: "Starker gefrierender Regen",
+
+  71: "Leichter Schneefall",
+  73: "Schneefall",
+  75: "Starker Schneefall",
+  77: "Schneegriesel",
+
   80: "Regenschauer",
+  81: "Kräftige Regenschauer",
+  82: "Heftige Regenschauer",
+
+  85: "Schneeschauer",
+  86: "Starke Schneeschauer",
+
   95: "Gewitter",
+  96: "Gewitter mit Hagel",
+  99: "Starkes Gewitter mit Hagel",
 };
 
 export default function Weather() {
@@ -86,7 +130,6 @@ export default function Weather() {
   return (
     <section className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
-
         <div className="text-center mb-14">
           <h2 className="text-5xl font-bold">
             ☀️ Aktuelles Wetter in Hreljići
@@ -98,73 +141,63 @@ export default function Weather() {
         </div>
 
         <div className="bg-white rounded-3xl shadow-xl p-10">
-
           <div className="grid lg:grid-cols-2 gap-12">
-
             <div>
-
               <div className="text-7xl font-bold">
                 {Math.round(weather.current.temperature_2m)}°
               </div>
 
               <div className="text-2xl mt-4">
-                {weatherIcons[weather.current.weather_code]}{" "}
-                {weatherText[weather.current.weather_code]}
+                {weatherIcons[weather.current.weather_code] ?? "🌤️"}{" "}
+                {weatherText[weather.current.weather_code] ?? "Unbekannt"}
               </div>
 
               <div className="mt-8 space-y-3 text-lg text-slate-600">
-
                 <p>
                   💨 Wind: {Math.round(weather.current.wind_speed_10m)} km/h
                 </p>
 
                 <p>
-                  💧 Luftfeuchtigkeit: {weather.current.relative_humidity_2m} %
+                  💧 Luftfeuchtigkeit:{" "}
+                  {weather.current.relative_humidity_2m} %
                 </p>
 
-                <p>
-                  📍 House Villa Talija · Hreljići
-                </p>
-
+                <p>📍 House Villa Talija · Hreljići</p>
               </div>
-
             </div>
 
             <div className="grid grid-cols-5 gap-4">
-
-              {weather.daily.time.slice(0,5).map((day,index)=>(
+              {weather.daily.time.slice(0, 5).map((day, index) => (
                 <div
                   key={day}
                   className="rounded-2xl bg-slate-100 p-4 text-center hover:bg-slate-200 transition"
                 >
-
                   <div className="font-semibold">
-                    {new Date(day).toLocaleDateString("de-DE",{
-                      weekday:"short"
+                    {new Date(day).toLocaleDateString("de-DE", {
+                      weekday: "short",
                     })}
                   </div>
 
                   <div className="text-3xl mt-4">
-                    {weatherIcons[weather.daily.weather_code[index]]}
+                    {weatherIcons[weather.daily.weather_code[index]] ?? "🌤️"}
                   </div>
 
                   <div className="text-xl font-bold mt-3">
-                    {Math.round(weather.daily.temperature_2m_max[index])}°
+                    {Math.round(
+                      weather.daily.temperature_2m_max[index]
+                    )}°
                   </div>
 
                   <div className="text-slate-500">
-                    {Math.round(weather.daily.temperature_2m_min[index])}°
+                    {Math.round(
+                      weather.daily.temperature_2m_min[index]
+                    )}°
                   </div>
-
                 </div>
               ))}
-
             </div>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );
