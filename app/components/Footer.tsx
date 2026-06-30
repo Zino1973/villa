@@ -19,6 +19,17 @@ export default function Footer() {
             <p className="mt-4 text-gray-400">
               Privater Pool • WLAN • Außenküche • Napoleon Grill
             </p>
+
+            <div className="mt-6">
+              <a
+                href="https://www.instagram.com/villa.talija"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-pink-400 hover:text-pink-300 transition"
+              >
+                📷 @villa.talija
+              </a>
+            </div>
           </div>
 
           {/* Kontakt */}
@@ -100,6 +111,12 @@ export default function Footer() {
 
               <li><a href="/datenschutz" className="hover:text-sky-400 transition">Datenschutz</a></li>
 
+              <li><a href="/agb" className="hover:text-sky-400 transition">AGB</a></li>
+
+              <li><a href="/widerruf" className="hover:text-sky-400 transition">Widerruf</a></li>
+
+              <li><a href="/hausordnung" className="hover:text-sky-400 transition">Hausordnung</a></li>
+
             </ul>
           </div>
 
@@ -108,11 +125,15 @@ export default function Footer() {
         <div className="border-t border-slate-700 mt-12 pt-8 text-center text-gray-400">
 
           <p>
-            © {new Date().getFullYear()} House Villa Talija · Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} <strong>House Villa Talija</strong> · Alle Rechte vorbehalten.
           </p>
 
           <p className="mt-2 text-sm">
             Private Ferienhausvermietung · Christian Zinner · Hreljići · Istrien · Kroatien
+          </p>
+
+          <p className="mt-4 text-xs text-gray-500">
+            Mit der Nutzung dieser Website akzeptieren Sie unsere Datenschutzbestimmungen und AGB.
           </p>
 
         </div>

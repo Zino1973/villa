@@ -1,97 +1,158 @@
-export default function Datenschutz() {
+export default function DatenschutzPage() {
   return (
-    <main className="max-w-5xl mx-auto px-6 py-20">
+    <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white py-20">
+      <div className="max-w-5xl mx-auto px-6">
 
-      <h1 className="text-4xl font-bold mb-10">
-        Datenschutzerklärung
-      </h1>
-
-      <div className="space-y-10 text-lg leading-8">
-
-        <section>
-          <h2 className="text-2xl font-semibold mb-3">
-            1. Verantwortlicher
-          </h2>
-
-          <p>
-            Christian Zinner<br />
-            Kirchberg 17<br />
-            85276 Pfaffenhofen an der Ilm<br />
-            Deutschland
+        <div className="text-center mb-16">
+          <p className="uppercase tracking-[6px] text-pink-600 font-semibold">
+            Rechtliches
           </p>
 
-          <p className="mt-4">
-            E-Mail: zinner123@outlook.de
+          <h1 className="mt-4 text-5xl font-bold text-slate-900">
+            Datenschutzerklärung
+          </h1>
+
+          <p className="mt-6 text-xl text-slate-600">
+            House Villa Talija · Hreljići · Istrien
           </p>
-        </section>
+        </div>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-3">
-            2. Zugriffsdaten
-          </h2>
+        <div className="bg-white rounded-3xl shadow-xl p-10 space-y-10 text-slate-700 leading-8">
 
-          <p>
-            Beim Besuch dieser Website werden automatisch Informationen
-            durch den Hostinganbieter erfasst (z. B. IP-Adresse,
-            Browsertyp, Betriebssystem, Datum und Uhrzeit des Zugriffs).
-            Diese Daten dienen ausschließlich der technischen Bereitstellung
-            und Sicherheit der Website.
-          </p>
-        </section>
+          <section>
+            <h2 className="text-2xl font-bold mb-3">
+              1. Verantwortlicher
+            </h2>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-3">
-            3. Kontaktaufnahme
-          </h2>
+            <p>
+              Christian Zinner<br />
+              Kirchberg 17<br />
+              85276 Pfaffenhofen an der Ilm<br />
+              Deutschland
+            </p>
 
-          <p>
-            Wenn Sie per WhatsApp, Telefon oder E-Mail Kontakt aufnehmen,
-            werden die von Ihnen übermittelten Daten ausschließlich zur
-            Bearbeitung Ihrer Anfrage verwendet.
-          </p>
-        </section>
+            <p className="mt-4">
+              E-Mail: zinner123@outlook.de<br />
+              Telefon: +49 176 35863392
+            </p>
+          </section>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-3">
-            4. Google Maps
-          </h2>
+          <section>
+            <h2 className="text-2xl font-bold mb-3">
+              2. Allgemeines
+            </h2>
 
-          <p>
-            Auf dieser Website kann Google Maps zur Darstellung des
-            Standorts eingebunden werden. Anbieter ist Google Ireland
-            Limited. Beim Laden der Karte können personenbezogene Daten
-            an Google übertragen werden.
-          </p>
-        </section>
+            <p>
+              Der Schutz Ihrer personenbezogenen Daten ist uns wichtig.
+              Wir verarbeiten personenbezogene Daten ausschließlich im
+              Rahmen der geltenden Datenschutzgesetze, insbesondere der DSGVO.
+            </p>
+          </section>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-3">
-            5. Externe Buchungsplattformen
-          </h2>
+          <section>
+            <h2 className="text-2xl font-bold mb-3">
+              3. Server-Logfiles
+            </h2>
 
-          <p>
-            Diese Website enthält Links zu externen Plattformen wie
-            Airbnb oder Ferienhausmiete.de. Für deren Inhalte und
-            Datenschutzbestimmungen sind ausschließlich die jeweiligen
-            Betreiber verantwortlich.
-          </p>
-        </section>
+            <p>
+              Beim Besuch dieser Website werden automatisch technische Daten
+              (z. B. Browsertyp, Betriebssystem, Uhrzeit des Zugriffs,
+              IP-Adresse) verarbeitet, soweit dies für den Betrieb der Website
+              erforderlich ist.
+            </p>
+          </section>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-3">
-            6. Ihre Rechte
-          </h2>
+          <section>
+            <h2 className="text-2xl font-bold mb-3">
+              4. Cookies
+            </h2>
 
-          <p>
-            Sie haben jederzeit das Recht auf Auskunft, Berichtigung,
-            Löschung, Einschränkung der Verarbeitung sowie Widerspruch
-            gegen die Verarbeitung Ihrer personenbezogenen Daten nach den
-            gesetzlichen Vorschriften der DSGVO.
-          </p>
-        </section>
+            <p>
+              Diese Website verwendet Cookies. Nicht technisch notwendige
+              Cookies werden nur nach Ihrer Einwilligung gesetzt.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-3">
+              5. Google Analytics
+            </h2>
+
+            <p>
+              Soweit Sie eingewilligt haben, verwenden wir Google Analytics
+              zur Analyse der Nutzung unserer Website. Die Verarbeitung erfolgt
+              auf Grundlage Ihrer Einwilligung.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-3">
+              6. Instagram
+            </h2>
+
+            <p>
+              Auf unserer Website ist ein Instagram-Feed eingebunden.
+              Beim Laden des Feeds können Daten an Instagram bzw. Meta
+              übermittelt werden.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-3">
+              7. WhatsApp
+            </h2>
+
+            <p>
+              Bei Nutzung unseres WhatsApp-Links gelten zusätzlich die
+              Datenschutzbestimmungen von WhatsApp Ireland Limited.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-3">
+              8. Wetterdienst
+            </h2>
+
+            <p>
+              Für die Wettervorhersage werden Daten von Open-Meteo geladen.
+              Dabei können technische Verbindungsdaten verarbeitet werden.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-3">
+              9. Ihre Rechte
+            </h2>
+
+            <ul className="list-disc ml-6 space-y-2">
+              <li>Auskunft</li>
+              <li>Berichtigung</li>
+              <li>Löschung</li>
+              <li>Einschränkung der Verarbeitung</li>
+              <li>Datenübertragbarkeit</li>
+              <li>Widerspruch</li>
+              <li>Widerruf einer Einwilligung</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-3">
+              10. Kontakt
+            </h2>
+
+            <p>
+              Bei Fragen zum Datenschutz wenden Sie sich bitte an:
+            </p>
+
+            <p className="mt-4">
+              Christian Zinner<br />
+              E-Mail: zinner123@outlook.de
+            </p>
+          </section>
+
+        </div>
 
       </div>
-
     </main>
   );
 }
