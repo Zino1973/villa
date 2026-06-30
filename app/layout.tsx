@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 import Schema from "./schema";
-import Cookiebot from "./components/Cookiebot";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 
 export const metadata: Metadata = {
@@ -113,8 +113,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
+      <head>
+        <Script
+          id="ccm19"
+          src="https://cloud.ccm19.de/app.js?apiKey=cb954cac4f31c4113538686110829884f148253a6c3af44a&domain=6a4421518689c8517b03b604"
+          strategy="beforeInteractive"
+          referrerPolicy="origin"
+        />
+      </head>
+
       <body>
-        <Cookiebot />
         <GoogleAnalytics />
         <Schema />
         {children}
