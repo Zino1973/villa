@@ -31,14 +31,12 @@ export default function Instagram() {
   return (
     <section className="bg-gradient-to-b from-white to-slate-50 py-24">
       <div className="max-w-7xl mx-auto px-6">
-
         <div className="text-center mb-16">
-
           <p className="uppercase tracking-[6px] text-pink-600 font-semibold">
             Instagram
           </p>
 
-          <h2 className="mt-4 text-5xl font-bold">
+          <h2 className="mt-4 text-5xl font-bold text-slate-900">
             Momente aus der Villa Talija
           </h2>
 
@@ -46,15 +44,13 @@ export default function Instagram() {
             Folgen Sie uns auf Instagram und entdecken Sie aktuelle Eindrücke
             aus unserer Ferienvilla in Istrien.
           </p>
-
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-
           {posts.map((post, index) => (
             <a
               key={index}
-              href="https://www.instagram.com/villa.talija"
+              href="https://www.instagram.com/villa.talija?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
               rel="noopener noreferrer"
               className="group overflow-hidden rounded-3xl shadow-xl"
@@ -68,26 +64,24 @@ export default function Instagram() {
               />
             </a>
           ))}
-
         </div>
 
         <div className="mt-16 text-center">
-
           <a
-            href="https://www.instagram.com/villa.talija"
+            href="https://www.instagram.com/villa.talija?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 px-10 py-5 text-xl font-bold text-white shadow-2xl hover:scale-105 transition"
+            className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-orange-500 px-12 py-6 text-2xl font-bold text-white shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-pink-400/40"
           >
-            📷 @villa.talija folgen
+            <span className="text-3xl">📷</span>
+            <span>@villa.talija folgen</span>
           </a>
 
-          <p className="mt-5 text-slate-500">
-            Tägliche Eindrücke • Pool • Strände • Sonnenuntergänge • Urlaub in Istrien
+          <p className="mt-6 text-lg text-slate-500">
+            Tägliche Eindrücke • Pool • Strände • Sonnenuntergänge • Urlaub in
+            Istrien
           </p>
-
         </div>
-
       </div>
     </section>
   );
