@@ -134,27 +134,9 @@ export default function Hero() {
 
           {/* Infokarten */}
 
-          <div className="mt-16 grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="mt-16 max-w-2xl mx-auto">
 
-            <div className="rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl p-8">
-
-              <div className="text-sm uppercase tracking-[4px] text-white/70">
-                ☀️ Heute in Hreljići
-              </div>
-
-              <div className="mt-4 text-5xl font-black">
-                29°C
-              </div>
-
-              <div className="mt-2 text-xl">
-                Sonnig
-              </div>
-
-              <div className="text-white/70 mt-2">
-                Perfektes Poolwetter 🌴
-              </div>
-
-            </div>
+            
 
             <a
               href="https://maps.google.com/?q=House+Villa+Talija+Hreljici"
