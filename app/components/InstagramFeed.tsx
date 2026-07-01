@@ -5,9 +5,19 @@ import Script from "next/script";
 
 export default function InstagramFeed() {
   useEffect(() => {
-    if ((window as any).ElfSightApps?.init) {
-      (window as any).ElfSightApps.init();
-    }
+    const init = () => {
+      if ((window as any).ElfSightApps?.init) {
+        (window as any).ElfSightApps.init();
+      }
+    };
+
+    init();
+
+    window.addEventListener("ccm19WidgetClosed", init);
+
+    return () => {
+      window.removeEventListener("ccm19WidgetClosed", init);
+    };
   }, []);
 
   return (
@@ -15,7 +25,6 @@ export default function InstagramFeed() {
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="text-center mb-12">
-
           <p className="uppercase tracking-[6px] text-pink-600 font-semibold">
             Instagram
           </p>
@@ -28,19 +37,19 @@ export default function InstagramFeed() {
             Folgen Sie uns auf Instagram und entdecken Sie aktuelle Eindrücke,
             Sonnenuntergänge und Urlaubsmomente aus Istrien.
           </p>
-
         </div>
 
         <Script
           src="https://elfsightcdn.com/platform.js"
           strategy="lazyOnload"
+          data-ccm-loader="true"
+          data-ccm-category="external"
         />
 
         <div
           className="elfsight-app-21fd4161-e347-4eb9-805f-200ade23214f"
           data-elfsight-app-lazy
         />
-
       </div>
     </section>
   );

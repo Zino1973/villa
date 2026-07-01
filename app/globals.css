@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 /* ==========================================
    Farben
 ========================================== */
@@ -15,13 +14,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 /* ==========================================
@@ -44,7 +36,7 @@ body {
 
 a,
 button {
-  transition: all 0.25s ease;
+  transition: all .25s ease;
 }
 
 /* ==========================================
@@ -83,7 +75,7 @@ img {
 
 ::selection {
   background: #0284c7;
-  color: white;
+  color: #fff;
 }
 
 /* ==========================================
@@ -107,7 +99,7 @@ img {
 .fc .fc-button {
   background: #0284c7 !important;
   border: none !important;
-  color: white !important;
+  color: #fff !important;
   border-radius: 10px !important;
   padding: 8px 14px !important;
   font-weight: 600;
@@ -192,4 +184,127 @@ img {
 
 .leaflet-control-zoom a {
   color: #111827;
+}
+
+/* ==========================================
+   Datenschutzerklärung
+========================================== */
+
+.privacy-content {
+  background: #ffffff !important;
+  color: #1f2937 !important;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.privacy-content,
+.privacy-content * {
+  color: #1f2937 !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+.privacy-content h1,
+.privacy-content h2,
+.privacy-content h3,
+.privacy-content h4,
+.privacy-content h5,
+.privacy-content h6 {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  font-weight: 700;
+}
+
+.privacy-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.privacy-content h2 {
+  font-size: 1.8rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.privacy-content h3 {
+  font-size: 1.35rem;
+  margin-top: 2rem;
+  margin-bottom: .75rem;
+}
+
+.privacy-content p,
+.privacy-content li,
+.privacy-content span,
+.privacy-content div,
+.privacy-content td,
+.privacy-content th {
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+.privacy-content strong {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+.privacy-content a {
+  color: #2563eb !important;
+  -webkit-text-fill-color: #2563eb !important;
+  text-decoration: underline;
+}
+
+.privacy-content ul,
+.privacy-content ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.privacy-content li {
+  margin-bottom: .5rem;
+}
+
+.privacy-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.privacy-content th,
+.privacy-content td {
+  border: 1px solid #d1d5db;
+  padding: .75rem;
+}
+
+.privacy-content th {
+  background: #f8fafc;
+}
+
+/* ==========================================
+   Smartphone
+========================================== */
+
+@media (max-width:768px) {
+
+  .privacy-content {
+    font-size: 1.05rem;
+    line-height: 1.9;
+  }
+
+  .privacy-content h1 {
+    font-size: 2rem;
+  }
+
+  .privacy-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .privacy-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .privacy-content table {
+    display: block;
+    overflow-x: auto;
+  }
+
 }
