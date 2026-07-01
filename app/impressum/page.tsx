@@ -1,93 +1,34 @@
-export default function Impressum() {
+import impressumHtml from "./impressum";
+
+export const metadata = {
+  title: "Impressum",
+};
+
+export default function ImpressumPage() {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-20">
-      <h1 className="text-4xl font-bold mb-10">Impressum</h1>
+    <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white py-20">
+      <div className="max-w-5xl mx-auto px-6">
 
-      <div className="space-y-10 text-lg leading-8 text-slate-700">
-
-        <section>
-          <h2 className="text-2xl font-semibold mb-3">
-            Angaben gemäß § 5 DDG
-          </h2>
-
-          <p>
-            Christian Zinner<br />
-            Kirchberg 17<br />
-            85276 Pfaffenhofen an der Ilm<br />
-            Deutschland
+        <div className="text-center mb-16">
+          <p className="uppercase tracking-[6px] text-pink-600 font-semibold">
+            Rechtliches
           </p>
-        </section>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-3">
-            Kontakt
-          </h2>
+          <h1 className="mt-4 text-5xl font-bold text-slate-900">
+            Impressum
+          </h1>
 
-          <p>
-            Telefon: +49 176 35863392<br />
-            E-Mail: zinner123@outlook.de
+          <p className="mt-6 text-xl text-slate-600">
+            House Villa Talija · Hreljići · Istrien
           </p>
-        </section>
+        </div>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-3">
-            Verantwortlich für den Inhalt
-          </h2>
-
-          <p>
-            Christian Zinner<br />
-            Kirchberg 17<br />
-            85276 Pfaffenhofen an der Ilm
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-semibold mb-3">
-            Hinweis
-          </h2>
-
-          <p>
-            Diese Website dient der privaten Vermietung der Ferienunterkunft
-            <strong> House Villa Talija</strong> in Hreljići, Istrien (Kroatien).
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-semibold mb-3">
-            Haftung für Inhalte
-          </h2>
-
-          <p>
-            Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt.
-            Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte
-            übernehmen wir jedoch keine Gewähr.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-semibold mb-3">
-            Haftung für Links
-          </h2>
-
-          <p>
-            Diese Website enthält Links zu externen Webseiten Dritter.
-            Auf deren Inhalte haben wir keinen Einfluss und übernehmen
-            hierfür keine Gewähr.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-semibold mb-3">
-            Urheberrecht
-          </h2>
-
-          <p>
-            Die auf dieser Website veröffentlichten Inhalte und Bilder
-            unterliegen dem deutschen Urheberrecht. Eine Verwendung außerhalb
-            der gesetzlichen Bestimmungen bedarf der vorherigen schriftlichen
-            Zustimmung.
-          </p>
-        </section>
+        <div className="bg-white rounded-3xl shadow-xl p-10">
+          <div
+            className="privacy-content"
+            dangerouslySetInnerHTML={{ __html: impressumHtml }}
+          />
+        </div>
 
       </div>
     </main>
